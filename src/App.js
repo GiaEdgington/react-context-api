@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
+import { ThemeContext } from './contexts/ThemeContext';
 
 function App() {
   return (
     <div>
-      <ThemeContext />
+      <ThemeContext>
+        <Booklist/>
+      </ThemeContext>
     </div>
   );
 }

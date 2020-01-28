@@ -10,9 +10,15 @@ class ThemeContext extends Component {
         dark: {bg: "444"}
     }
 
+    changeTheme = () => {
+        this.setState({
+            LightTheme: !this.state.LightTheme
+        })
+    }
+
     render() {
         return (
-            <ThemeContext.Provider value = {{...this.state}}>
+            <ThemeContext.Provider value = {{...this.state, changeTheme: this.changeTheme}}>
                 {this.props.children}
             </ThemeContext.Provider>
         )
